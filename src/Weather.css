@@ -1,0 +1,14 @@
+.Weather {
+  text-align: left;
+  margin: 0 auto;
+}
+
+.Weather h2 {
+  text-align: center;
+  margin-bottom: 0;
+}
+
+li:first-child {
+  list-style-type: none;
+  text-align: justify;
+}
