@@ -21,7 +21,7 @@ export default function App() {
 
   return (
     <Container>
-    <Box className="App" style={{ width: 600, margin: 'auto' }}>
+    <Box className="App" style={{ width: 650, margin: 'auto' }}>
       <Heading>Weather App</Heading>
       <Search updateWeather={updateWeather} setFutureData={setFutureData}/>
       <Section className="Weather">

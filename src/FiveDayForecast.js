@@ -2,7 +2,6 @@ import React from 'react';
 import ClipLoader from "react-spinners/ClipLoader";
 import DailyForecast from './DailyForecast'
 import { Box } from 'react-bulma-components';
-import axios from "axios";
 
 export default function FiveDayForecast ({fiveDayData}) {
 

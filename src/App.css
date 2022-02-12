@@ -5,5 +5,8 @@
 }
 
 #root {
-  margin-top: 15%;
+  padding-top: 20%;
+  height: 100vh;
+  margin: 0 auto;
+  background-color: darkseagreen;
 }

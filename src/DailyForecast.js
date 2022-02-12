@@ -1,4 +1,5 @@
 import React from 'react'
+import './DailyForecast.css'
 import { Columns } from 'react-bulma-components';
 
 export default function DailyForecast ({fiveDayData}) {
@@ -11,9 +12,10 @@ export default function DailyForecast ({fiveDayData}) {
   }
 
   return (
-    fiveDayData.map(day => {
+    <Columns display="flex" size={5}>
+    {fiveDayData.map(day => {
       return (
-      <Columns key={formatDate(day.dt)}>
+      <Columns.Column key={formatDate(day.dt)}>
         <h3>{formatDate(day.dt)}</h3>
         <img src={`http://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png`}
           alt={day.weather[0].description}
@@ -24,7 +26,8 @@ export default function DailyForecast ({fiveDayData}) {
           |
           <span className="future-low">{Math.round(day.temp.min)}°</span>
         </div>
-      </Columns>
-      )})
+      </Columns.Column>
+      )})}
+    </Columns>
   )
 }

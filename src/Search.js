@@ -3,9 +3,9 @@ import { Form, Button, Block, Container, Columns, Notification } from 'react-bul
 import axios from "axios";
 
 export default function Search({ updateWeather, setFutureData }) {
-  const { Input, Field, Control, Label } = Form;
-  const [city, setCity] = useState("");
-  const [isValid, setIsValid]= useState(null)
+  const { Input, Field, Control } = Form;
+  const [city, setCity] = useState("Austin");
+  const [isValid, setIsValid]= useState(true)
 
   let apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=bafdfac4d6d7b1fc3d3952df39f393b7&units=metric`;
 
@@ -28,7 +28,7 @@ export default function Search({ updateWeather, setFutureData }) {
 
   function handleXClick(e) {
     e.preventDefault()
-    setIsValid(!isValid);
+    setIsValid(true);
   }
 
   function handleChange(e) {
@@ -37,7 +37,7 @@ export default function Search({ updateWeather, setFutureData }) {
 
   function get5DayForecast (coords) {
     console.log(coords)
-    let futureForecastURL = `https://api.openweathermap.org/data/2.5/onecall?lat=${coords.lat}&lon=${coords.lon}&exclude=alert,minutely,current,hourly&appid=bafdfac4d6d7b1fc3d3952df39f393b7&units=imperial`
+    let futureForecastURL = `https://api.openweathermap.org/data/2.5/onecall?lat=${coords.lat}&lon=${coords.lon}&exclude=alert,minutely,current,hourly&appid=bafdfac4d6d7b1fc3d3952df39f393b7&units=metric`
     axios.get(futureForecastURL).then(getFutureData)
   }
 
@@ -79,15 +79,15 @@ export default function Search({ updateWeather, setFutureData }) {
 
           <br/>
           {isValid ?
+            null
+          :
           <Columns>
-            <Block>
             <Notification color="warning">
               Please enter a valid city name
               <Button remove onclick={handleXClick}/>
             </Notification>
-          </Block>
           </Columns>
-          : null}
+          }
     </Container>
   );
 }
