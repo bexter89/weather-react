@@ -1,12 +1,11 @@
 import React, { useState } from "react";
-import { Form, Button, Columns, Container } from 'react-bulma-components';
+import { Form, Button, Block, Container, Columns, Notification } from 'react-bulma-components';
 import axios from "axios";
 
 export default function Search({ updateWeather, setFutureData }) {
   const { Input, Field, Control, Label } = Form;
-  const [coords, setCoords] = useState('')
   const [city, setCity] = useState("");
-  const [isValid, setIsValid]= useState(false)
+  const [isValid, setIsValid]= useState(null)
 
   let apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=bafdfac4d6d7b1fc3d3952df39f393b7&units=metric`;
 
@@ -14,10 +13,22 @@ export default function Search({ updateWeather, setFutureData }) {
     e.preventDefault();
     if (city.length <= 2) {
       setIsValid(false)
-    } else {
-      setIsValid(true)
-      axios.get(apiURL).then(getWeatherData).catch(setIsValid(false));
     }
+    else {
+      setIsValid(true)
+      axios.get(apiURL)
+        .then(getWeatherData)
+        .catch(err => {
+           if (err) {
+            setIsValid(false);
+          }
+        })
+    }
+  }
+
+  function handleXClick(e) {
+    e.preventDefault()
+    setIsValid(!isValid);
   }
 
   function handleChange(e) {
@@ -65,6 +76,18 @@ export default function Search({ updateWeather, setFutureData }) {
           </Control>
         </Field>
       </form>
+
+          <br/>
+          {isValid ?
+          <Columns>
+            <Block>
+            <Notification color="warning">
+              Please enter a valid city name
+              <Button remove onclick={handleXClick}/>
+            </Notification>
+          </Block>
+          </Columns>
+          : null}
     </Container>
   );
 }
