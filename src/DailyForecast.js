@@ -1,5 +1,5 @@
 import React from 'react'
-import { Columns, Content, Box } from 'react-bulma-components';
+import { Columns } from 'react-bulma-components';
 
 export default function DailyForecast ({fiveDayData}) {
 

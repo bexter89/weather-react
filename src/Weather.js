@@ -1,5 +1,5 @@
 import React from "react";
-import { Columns, Content, Heading, Section, Container } from 'react-bulma-components';
+import { Columns, Content, Heading } from 'react-bulma-components';
 import "./Weather.css";
 
 export default function Weather({ cityData }) {
