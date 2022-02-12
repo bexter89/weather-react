@@ -1,10 +1,7 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-# API Service - Questions & Answers
+# React Weather App
 <br />
 <p align="center">
-  <h1 align="center">Alligator API System Design</h1>
+  <h1 align="center">React, AJAX, Bulma</h1>
 
   <p align="center">
     Custom-built RESTful API to support server and database operations for a high-end fashion website that can scale to meet the demands of production traffic.
