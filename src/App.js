@@ -28,6 +28,7 @@ export default function App() {
       {weatherData && <Weather cityData={weatherData} />}
       {fiveDayData && <FiveDayForecast fiveDayData={fiveDayData}/>}
       </Section>
+      <a href="https://github.com/bexter89/weather-react" >Open source code</a> by Rebekah Cruz
     </Box>
     </Container>
   );
