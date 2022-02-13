@@ -20,13 +20,14 @@ I was tasked with building a weather app that would show the weather for any giv
       <th>Programming Languages</th>
       <td>
         <img alt="JavaScript" src="https://img.shields.io/badge/javascript%20-%23323330.svg?&style=for-the-badge&logo=javascript&logoColor=%23F7DF1E" />
-        <img alt="NodeJS" src="https://img.shields.io/badge/node.js-%2343853D.svg?&style=for-the-badge&logo=node.js&logoColor=white"/>
       </td>
     </tr>
     <tr>
       <th>Tools & Technologies</th>
       <td>
-        <img alt="Express.js" src="https://img.shields.io/badge/express.js-%23404d59.svg?&style=for-the-badge"/>
+        <img alt="Bulma" src="https://img.shields.io/badge/Bulma-03D1B2?style=for-the-badge&logo=bulma&logoColor=white"/>
+        <img alt="CRA" src="https://img.shields.io/badge/Create%20React%20App-black?style=for-the-badge&logo=createreactapp&logoColor=blue"/>
+        
       </td>
     </tr>
     <tr>
@@ -38,7 +39,7 @@ I was tasked with building a weather app that would show the weather for any giv
     <tr>
       <th>Deployment</th>
       <td>
-        <img alt="AWS" src="https://img.shields.io/badge/AWS-%23FF9900.svg?&style=for-the-badge&logo=amazon-aws&logoColor=white"/>
+        <img alt="Netlify" src="https://img.shields.io/badge/Netlify-black?style=for-the-badge&logo=netlify&logoColor=30C8C9"/>
       </td>
     </tr>
   </tbody>
