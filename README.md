@@ -2,6 +2,10 @@
 <br />
 an open souce weather app using the <a href="https://openweathermap.org/" >Open Weather API</a>. 
 
+# Demo
+
+You can demo the application <a href="https://bexter89-react-weather.netlify.app/">here</a>.
+
 # Stack
 
 <table>
